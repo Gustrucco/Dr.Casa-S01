@@ -34,7 +34,7 @@ class EnfermedadAutoinmune {
 		personasAfectadas.put(unaPersona, self.cantidadDiasAfectandoA(unaPersona) + 1)
 	}
 	
-	method esAgresiva(unaPersona) {
+	method esAgresivaPara(unaPersona) {
 		return self.cantidadDiasAfectandoA(unaPersona) > 30
 	}
 	
