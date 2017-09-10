@@ -23,13 +23,23 @@ class EnfermedadInfecciosa {
 class EnfermedadAutoinmune {
 
 	var cantidadCelulasAmenazadas
-	var personasAfectadas
+	var personasAfectadas = new Dictionary()
 	
 	method provocarEfectoSobre(unaPersona) {
 		unaPersona.destruirCelulas(cantidadCelulasAmenazadas)
+		self.sumarUnDiaPara(unaPersona)
 	}
 	
-	method esAgresiva() {
-		
+	method sumarUnDiaPara(unaPersona) {
+		personasAfectadas.put(unaPersona, self.cantidadDiasAfectandoA(unaPersona))
+	}
+	
+	method esAgresiva(unaPersona) {
+		return self.cantidadDiasAfectandoA(unaPersona) > 30
+	}
+	
+	method cantidadDiasAfectandoA(unaPersona) {
+		// Recibe una lambda, es super choto
+		return personasAfectadas.getOrElse(unaPersona, {0})
 	}
 }
