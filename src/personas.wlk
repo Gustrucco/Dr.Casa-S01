@@ -10,7 +10,7 @@ class Persona {
 	}
 	
 	method pasarUnDia() {
-		
+		enfermedades.forEach { enfermedad => enfermedad.provocarEfectoSobre(self) }
 	}
 	
 	method destruirCelulas(unaCantidad) {
