@@ -2,6 +2,7 @@
 class Persona {
 	
 	var enfermedades = #{}
+	var estaEnComa = false
 	var cantidadCelulas
 	var temperatura
 	
@@ -29,6 +30,6 @@ class Persona {
 	}
 	
 	method entrarEnComa() {
-		///
+		estaEnComa = true
 	}
 }
