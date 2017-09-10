@@ -31,7 +31,7 @@ class EnfermedadAutoinmune {
 	}
 	
 	method sumarUnDiaPara(unaPersona) {
-		personasAfectadas.put(unaPersona, self.cantidadDiasAfectandoA(unaPersona))
+		personasAfectadas.put(unaPersona, self.cantidadDiasAfectandoA(unaPersona) + 1)
 	}
 	
 	method esAgresiva(unaPersona) {
